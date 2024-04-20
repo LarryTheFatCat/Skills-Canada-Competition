@@ -20,6 +20,17 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      @media only screen and (max-width: 575px) {
+        #title {
+          font-size: 20px;
+        }
+        #desc {
+          font-size: 15px !important;
+        }
+      }
+    </style>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <div class="navbar navbar-expand-sm fixed-top bg-light">
@@ -30,7 +41,7 @@
             alt="Company Logo Navbar brand"
             style="width: 50px"
           />
-          KKK
+          Nova
         </a>
         <button
           type="button"
@@ -50,7 +61,7 @@
       >
         <ul class="navbar-nav gap-5 p-2 text-primary text-center">
           <li class="navbar-item">Intro</li>
-          <li class="navbar-item">Hello</li>
+          <li class="navbar-item">Applications</li>
           <li class="navbar-item">Hello</li>
           <li class="navbar-item">Hello</li>
         </ul>
@@ -59,10 +70,10 @@
     <div class="container-fluid">
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">
+          <h1 class="display-5 fw-bold" id="title">
             Concerns With Artifical Intelligence
           </h1>
-          <p class="col-md-8 fs-4">
+          <p class="col-md-8 fs-4" id="desc">
             We take a dive into the concerns and ethical issues with Artifical
             Intelligence. Understanding how and why companies are pushing to use
             AI and layoff mass amounts of people.
@@ -72,9 +83,9 @@
       <div class="row">
         <h1 class="title-content p-5">What Is Artifical Intelligence?</h1>
       </div>
-      <div class="row">
-        <div class="col-md-6 d-md-flex flex-md-fill flex-grow-1">
-          <p>
+      <div class="row text-center">
+        <div class="col-lg-5 d-md-flex flex-md-fill flex-grow-1">
+          <p class="m-4 text-start">
             Artificial intelligence, or AI, is technology that enables computers
             and machines to simulate human intelligence and problem-solving
             capabilities.
@@ -88,26 +99,94 @@
             our daily lives.
           </p>
         </div>
-        <div class="col-md-6 mw-100 w-50">
+        <div class="col-md-6 mw-100 w-50 d-flex flex-column mx-auto">
           <img
-            class="float-end img-fluid mx-auto d-block"
-            src="./test_purpose/chatgpt-logo.png"
+            class="img-fluid"
+            src="./test_purpose/shutterstock_725383498.png"
             alt="test"
           />
         </div>
       </div>
-      <div class="w-50 text-center">
-        <div class="card">
-          <img
-            class="img-thumbnail align-items-center w-50"
-            src="./test_purpose/chatgpt-logo.png"
-            alt="ChatGPT Card 1 Image Logo"
-          />
-
-          <div class="card-header"><strong>ChatGPT</strong> - OpenAI</div>
-          <div class="card-body">
-            A natural language processing chatbot driven by generative AI that
-            allows you to have conversations to complete various tasks
+      <div class="row-cols-sm-1 text-center">
+        <h1>Applications With AI</h1>
+        <div class="card-group d-flex justify-content-evenly">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header">
+                <img
+                  class="img-fluid"
+                  src="./test_purpose/chatgpt-logo.png"
+                  alt="ChatGPT Card 1 Header"
+                />
+              </div>
+              <div class="card-body">
+                <p class="card-text text-start">
+                  a natural language processing chatbot driven by generative AI
+                  that allows you to have human-like conversations to complete
+                  various tasks.
+                </p>
+                <a
+                  name="btnCard1"
+                  id="btnCard1"
+                  class="btn btn-outline-primary d-flex flex-column"
+                  href="chat.openai.com"
+                  role="button"
+                  >Checkout ChatGPT</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header">
+                <img
+                  class="img-fluid w-50"
+                  src="./test_purpose/midjourney-logo.webp"
+                  alt="Midjourney Card-2 Header"
+                />
+              </div>
+              <div class="card-body text-start">
+                <p class="card-text">
+                  Midjourney generates images from natural language
+                  descriptions, called prompts, similar to OpenAI's DALL-E and
+                  Stability AI's Stable Diffusion.
+                </p>
+                <a
+                  name="btnMidjourney"
+                  id="btnMidjourney"
+                  class="btn btn-outline-primary d-flex flex-column"
+                  href="https://www.midjourney.com/home"
+                  role="button"
+                  >Checkout Midjourney</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header">
+                <img
+                  class="img-fluid w-50"
+                  src="./test_purpose/caktus-ai.jpg"
+                  alt="Caktus AI Card-3 Header"
+                />
+              </div>
+              <div class="card-body text-start">
+                <p>
+                  Caktus AI acts as a personal writing coach, offering
+                  suggestions to improve your writing style, grammar, and
+                  vocabulary.
+                </p>
+                <a
+                  name="caktusBtn"
+                  id="caktusBtn"
+                  class="btn btn-outline-primary d-flex flex-column"
+                  href="https://caktus.ai/"
+                  role="button"
+                  >Checkout Caktus AI</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
