@@ -32,8 +32,8 @@
       }
     </style>
   </head>
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
-    <div class="navbar navbar-expand-sm fixed-top bg-light">
+  <body data-bs-target=".navbar" data-bs-offset="50">
+    <div id="navbar" class="navbar navbar-expand-sm fixed-top bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
@@ -60,14 +60,19 @@
         id="collapseArea"
       >
         <ul class="navbar-nav gap-5 p-2 text-primary text-center">
-          <li class="navbar-item">Intro</li>
-          <li class="navbar-item">Applications</li>
-          <li class="navbar-item">Hello</li>
-          <li class="navbar-item">Hello</li>
+          <li class="navbar-item"><a href="#intro">Intro</a></li>
+          <li class="navbar-item"><a href="#application">Applications</a></li>
+          <li class="navbar-item"><a href="#concerns">Concerns</a></li>
+          <li class="navbar-item"><a href="#impact">Impact</a></li>
         </ul>
       </div>
     </div>
-    <div class="container-fluid">
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar"
+      data-bs-smooth-scroll="true"
+      class="container-fluid"
+    >
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold" id="title">
@@ -80,34 +85,36 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <h1 class="title-content p-5">What Is Artifical Intelligence?</h1>
-      </div>
-      <div class="row text-center">
-        <div class="col-lg-5 d-md-flex flex-md-fill flex-grow-1">
-          <p class="m-4 text-start">
-            Artificial intelligence, or AI, is technology that enables computers
-            and machines to simulate human intelligence and problem-solving
-            capabilities.
-            <br />
-            <br />
-            On its own or combined with other technologies (e.g., sensors,
-            geolocation, robotics) AI can perform tasks that would otherwise
-            require human intelligence or intervention. Digital assistants, GPS
-            guidance, autonomous vehicles, and generative AI tools (like Open
-            AI's Chat GPT) are just a few examples of AI in the daily news and
-            our daily lives.
-          </p>
+      <div class="container" id="intro">
+        <div class="row">
+          <h1 class="title-content p-5">What Is Artifical Intelligence?</h1>
         </div>
-        <div class="col-md-6 mw-100 w-50 d-flex flex-column mx-auto">
-          <img
-            class="img-fluid"
-            src="./test_purpose/shutterstock_725383498.png"
-            alt="test"
-          />
+        <div class="row text-center">
+          <div class="col-lg-5 d-md-flex flex-md-fill flex-grow-1">
+            <p class="m-4 text-start">
+              Artificial intelligence, or AI, is technology that enables
+              computers and machines to simulate human intelligence and
+              problem-solving capabilities.
+              <br />
+              <br />
+              On its own or combined with other technologies (e.g., sensors,
+              geolocation, robotics) AI can perform tasks that would otherwise
+              require human intelligence or intervention. Digital assistants,
+              GPS guidance, autonomous vehicles, and generative AI tools (like
+              Open AI's Chat GPT) are just a few examples of AI in the daily
+              news and our daily lives.
+            </p>
+          </div>
+          <div class="col-md-6 mw-100 w-50 d-flex flex-column mx-auto">
+            <img
+              class="img-fluid"
+              src="./test_purpose/shutterstock_725383498.png"
+              alt="test"
+            />
+          </div>
         </div>
       </div>
-      <div class="row-cols-sm-1 text-center">
+      <div class="row-cols-sm-1 text-center" id="application">
         <h1>Applications With AI</h1>
         <div class="card-group d-flex justify-content-evenly">
           <div class="col-md-3">
@@ -180,13 +187,84 @@
                 <a
                   name="caktusBtn"
                   id="caktusBtn"
-                  class="btn btn-outline-primary d-flex flex-column"
+                  class="btn btn-outline-primary d-flex flex-column focus-ring"
                   href="https://caktus.ai/"
                   role="button"
                   >Checkout Caktus AI</a
                 >
               </div>
             </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex flex-sm-column" id="concerns">
+            <h1 class="">Concerns With AI</h1>
+            <p class="lead d-flex mx-auto">
+              The widespread application of AI and its deep integration with the
+              economy and society have improved efficiency and produced
+              benefits. At the same time, it will inevitably impact the existing
+              social order and raise ethical concerns.
+            </p>
+            <ul class="list-group list-group-numbered">
+              <li class="list-group-item border-0">Algorithmic Bias</li>
+              <li class="list-group-item border-0">Data Collection & AI</li>
+              <li class="list-group-item border-0">
+                AI Faking Technology (Deep Fakes)
+              </li>
+              <li class="list-group-item border-0">Human Robot Interactions</li>
+              <li class="list-group-item border-0">Automation & Employment</li>
+              <li class="list-group-item border-0">
+                Autonomus Vehicles/Weapons
+              </li>
+              <li class="list-group-item border-0">Robot Rights</li>
+              <li class="list-group-item border-0">
+                Risk of Super Intelligence
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-fluid" id="impact">
+          <div class="row d-flex">
+            <h3 class="text-sm-end mx-sm-auto">
+              Ethical issues caused by features of AI
+            </h3>
+            <h5 class="text-start mb-2">Transparency</h5>
+            <p class="p col-md-6 text-sm-start">
+              ML is the core technology of current AI, especially (deep) neural
+              networks. However, it is hard to explain and understand the
+              inference procedure of ML, which is commonly known as the
+              “black-box.” The opacity of ML makes the algorithms or models
+              mysterious to users and even developers. This mainly leads to the
+              transparency issue. The lack of transparency not only leads to the
+              explanatory problem, but also leads to difficulties in human
+              monitoring and guidance of ML or AI. Thus, transparency or
+              explainability is one of the most widely discussed downside of AI.
+            </p>
+            <img
+              class="img-fluid align-items-end col-md-6 rounded-5"
+              src="./test_purpose/ai-ethics.png"
+              style="width: 25rem; height: auto"
+              alt="Machine Learning Stock Photo Image"
+            />
+          </div>
+          <div class="row">
+            <h5 class="text-end mb-2">Data Security and Privacy</h5>
+            <img
+              class="img-fluid col-md-6 rounded-5"
+              src="./test_purpose/data-security.jpg"
+              alt=""
+            />
+            <p class=" col-md-6 text-end">
+              The performance of current AI strongly depends on the training
+              data. Usually, a huge amount of data, which probably includes
+              personal data and private data, is required to train an AI model,
+              particularly the deep learning model. The misuse and malicious use
+              of data, such as (personal) information leakage or tampering, are
+              serious ethical issues that are closely related to every
+              individual, institution, organization, and even the country. Data
+              security and privacy are key issues encountered in the development
+              and application of AI technology.
+            </p>
           </div>
         </div>
       </div>
