@@ -66,9 +66,17 @@
           <li class="navbar-item">
             <a href="#intro" style="text-decoration: none">Intro</a>
           </li>
-          <li class="navbar-item"><a href="#application" style="text-decoration: none">Applications</a></li>
-          <li class="navbar-item"><a href="#concerns" style="text-decoration: none">Concerns</a></li>
-          <li class="navbar-item"><a href="#impact" style="text-decoration: none">Impact</a></li>
+          <li class="navbar-item">
+            <a href="#application" style="text-decoration: none"
+              >Applications</a
+            >
+          </li>
+          <li class="navbar-item">
+            <a href="#concerns" style="text-decoration: none">Concerns</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#impact" style="text-decoration: none">Impact</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -295,17 +303,19 @@
           <div class="text-center gx-5">
             <h4>Want To Get Notified About More AI Content?</h4>
             <div class="mb-3">
-              <input
-                type="email"
-                class="form-control w-25 w-auto mx-auto col-4"
-                name="inputEmail"
-                id="inputEmail"
-                aria-describedby="emailHelpId"
-                placeholder="abc@mail.com"
-              />
-              <button type="submit" class="btn btn-primary">
-                Submit To Get Notified
-              </button>
+              <form action="subscribe.php" method="GET">
+                <input
+                  type="email"
+                  class="form-control w-25 w-auto mx-auto col-4"
+                  name="inputEmail"
+                  id="inputEmail"
+                  aria-describedby="emailHelpId"
+                  placeholder="abc@mail.com"
+                />
+                <button type="submit" class="btn btn-primary">
+                  Submit To Get Notified
+                </button>
+              </form>
               <div class="text-center">
                 Copyright
                 <span id="date" value="date"></span>
